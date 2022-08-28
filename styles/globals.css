@@ -1,26 +1,887 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
+    /* =========== Global Css Style  ===========*/
+    /* ========================================== */
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+    body, html {
+      font-family: 'Poppins', sans-serif;
+      padding: 0;
+      margin: 0;
   }
-  body {
-    color: white;
-    background: black;
+  @font-face {
+      font-family: myFirstFont;
+      src: url(/public/fonts/priamos/priamos-serial-bold.ttf);
+   }
+  
+  h1, h2, h3, h4, h5, h6 , p {
+      color: #464646;
+      padding: 0;
+      margin: 0;
   }
-}
+  
+  .orange {
+      background-color: #F8AB6B;
+  }
+  
+  .gray {
+      background-color: #E5E5E5;
+  }
+  
+  .purple {
+      background-color: #39478F;
+  }
+  .gray {
+      background-color: #F4F4F8;
+  }
+  
+  .orangeText {
+      color: #F87000;
+  }
+  
+  .redText {
+      color: yellow;
+      font-family: 'myFirstFont', 'sans-serif';
+      font-weight: 700;
+  }
+  
+  .yellowText {
+      color: #FFC100;
+  }
+  .whiteText {
+      color: #D25B63;
+  }
+  
+  .title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 54px;
+  }
+  .titleNew {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 54px;
+      
+  }
+  
+  .subTitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+  }
+  .subTitleWhite {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: white;
+  }
+  
+  .secoundTitle {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 48px;
+  }
+  
+  .imageStyle {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+  }
+  
+  .miniContent {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      color: white;
+      max-width: 510px;
+  }
+  .about {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 38px;
+      color: #464646;
+  }
+  .boldContent {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+  }
+  
+  .smallContent {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+  }
+  .LargeContent {
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 65px;
+      /* or 135% */
+  
+      letter-spacing: 0.045em;
+  }
+  .LargeContentWhite {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 65px;
+      font-family: 'myFirstFont', 'sans-serif';
+      color: white;
+  }
+  .italicFont {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+  }
+  /* ================= Header Style ================= */
+  .headerSearch {
+      position: relative;
+      width: 50%;
+      height: 15%;
+      margin: -35px auto 0px;
+    }
+    
+    .headerSearch .add-search{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 35px;
+      border: 1px solid black;
+      outline: none;
+      padding: 0 20px;
+      border-radius: 25px;
+      background-color: white;
+    }
+    
+    .headerSearch .submit-search {
+      position: absolute;
+      top: 5px;
+      left: 70%;
+      height: calc(100% - 7px);
+      border: none;
+      border-radius: 60px;
+      outline: none;
+      margin: 1px;
+      padding: 0 70px;
+      cursor: pointer;
+      background: red;
+      color: #464646;
+      transition: width .35s ease-in-out,
+        background .35s ease-in-out;
+    }
+    
+    .headerSearch.done .submit-search {
+      width: calc(50% - 2px);
+      background: white;
+    }
+    
+    .headerSearch .submit-search .before-search,
+    .headerSearch .submit-search .after-search {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      text-align: center;
+      line-height: 38px;
+      transition: visibility .35s ease-in-out,
+        opacity .35s ease-in-out;
+    }
+    
+    .headerSearch.done .submit-search .before-search,
+    .headerSearch:not(.done) .submit-search .after-search {
+      visibility: hidden;
+      opacity: 0;
+    }
+    
+    .headerSearch .submit-search .after-search {
+      transition-delay: .35s;
+    }
+  
+  /* ========= Banner Style =========== */
+  .textPadding {
+      padding: 110px 0px 0px 75px;
+  }
+  .bannerDiv {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+  }
+  
+  .topButton {
+      max-width: 450px;
+      text-align: center;
+      height: 230px;
+  }
+  
+  .tButton {
+      background-color: #D25B63;
+      color: #F4F4F8;
+      width: 150px;
+      height: 50px;
+      border: 0;
+      border-radius: 42px;
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: 500; 
+  }
+  .pButton {
+      background-color: #4E309A;
+      padding: 10px 20px;
+      border: 2px solid #D25B63;
+      border-radius: 30px;
+      font-size: 15px;
+      line-height: 22px;
+      color: white;  
+  }
+  
+  .sendImage {
+      margin: 2px 0px 10px 0px !important;
+  }
+  
+  .checkOut {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+      color: white;
+      padding-right: 60px;
+  }
+  /* ========= About Style =========== */
+  
+  /* .leftImage , .rightImage {
+      background-color: #C8C3FB !important;
+  } */
+  .nagetiveMargin {
+      margin-bottom: -50px;
+  }
+  
+  
+  /* ========= Process Style =========== */
+  .leftSpace {
+      padding-left: 110px;
+  }
+  
+  .qButton {
+      background-color: #D25B63;
+      color: white;
+      border: 0;
+      border-radius: 50px;
+      font-size: 25px;
+      line-height: 38px;
+      box-shadow: 0px 2px 10px rgb(0 0 0 / 25%);
+      font-family: 'Poppins';
+      width: 230px;
+      height: 80px;
+      font-weight: 400;
+  }
+  .wButton {
+      padding: 10px 20px;
+      border: 1px solid #D25B63;
+      border-radius: 30px;
+      font-size: 15px;
+      line-height: 22px;
+      color: #464646;  
+  }
+  .numberContent {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      background-color: #F4F4F8;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      text-align: center;
+  }
+  .numberCenter {
+      margin: auto;
+      padding: 5px;
+  }
+  
+  /* ============== Service Style =========== */
+  
+  .midContent {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 38px;
+  }
+  
+  .squareSpace {
+      padding: 25px 0;
+  }
+  
+  .rightContentBg {
+      background-color: #F9E8E9;
+      border-radius: 10px;
+      width: 159px;
+      margin: 10px auto;
+  }
+  .rightContentVideo {
+      background-color: #F9E8E9;
+      border-radius: 10px;
+      margin: 10px auto;
+      height: 330px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 260px;
+  }
+  
+  .rightContent {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 10px 30px 0px;
+  }
+  
+  .serviceItalic {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 48px;
+      max-width: 485px;
+  }
+  
+  /* ============== Affordable Style =========== */
+  
+  .oButton {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 38px;
+      background-color: #FACB4B;
+      color: #333333;
+      padding: 10px 50px;
+      border: 0;
+      border-radius: 30px;
+  }
+  .subtitleCenter {
+      max-width: 760px;
+      margin: 20px auto 50px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+  }
+  
+  /* =========== Redesign Style ============ */
+  
+  .reTitle {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 60px;
+  }
+  .reTitleBold {
+      color: #D25B63;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 60px;
+  }
+  
+  /* ============== Footer Style =========== */
+  
+  .footerTitle {
+      font-family: 'myFirstFont';
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 65px;
+      color: #FBF3F3;
+  }
+  .menuLinkBlack {
+      text-decoration: none;
+      color: #464646;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 22px;
+  }
+  .menuLinkWhite {
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 22px;
+  }
+  
+  .iconBg {
+      background-color: white;
+      height: 24px;
+      border-radius: 4px;
+      max-width: 40px;
+  }
+  
+  
+  .subscription {
+      position: relative;
+      width: 90%;
+      height: 15%;
+    }
+    
+    .subscription .add-email{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      padding: 0 20px;
+      border-radius: 25px;
+      background-color: white;
+    }
+    
+    .subscription .submit-email {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      height: calc(100% - 7px);
+      width: 100px;
+      border: none;
+      border-radius: 60px;
+      outline: none;
+      margin: 1px;
+      padding: 0 70px;
+      cursor: pointer;
+      background: #FDF5F5;
+      color: #464646;
+      transition: width .35s ease-in-out,
+        background .35s ease-in-out;
+    }
+    
+    .subscription.done .submit-email {
+      width: calc(100% - 2px);
+      background: white;
+    }
+    
+    .subscription .submit-email .before-submit,
+    .subscription .submit-email .after-submit {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 38px;
+      transition: visibility .35s ease-in-out,
+        opacity .35s ease-in-out;
+    }
+    
+    .subscription.done .submit-email .before-submit,
+    .subscription:not(.done) .submit-email .after-submit {
+      visibility: hidden;
+      opacity: 0;
+    }
+    
+    .subscription .submit-email .after-submit {
+      transition-delay: .35s;
+    }
+    
+    /* .subscription:not(.done) .submit-email .before-submit,
+    .subscription.done .submit-email .after-submit {
+      visibility: visible;
+      opacity: 1;
+    } */
+  
+    .test {
+      max-width: 30%;
+    }
+    .aboutPosiTionRight {
+      position: absolute;
+      top: 350px;
+      right: 75px;
+  }
+    .aboutPosiTionLeft {
+      position: absolute;
+      top: 350px;
+      left: 50px;
+  }
+    .aboutImage {
+      min-width: 90% !important;
+    }
+  
+    .socialIcon {
+      font-size: 20px;
+      color: #D25B63;
+      margin: -6px 5px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #F4F4F8;
+  
+    }
+    .socialIcon:hover {
+      color: #F4F4F8;
+      background-color: #D25B63;
+      transition: 0.5s ease-out;
+    }
+  
+    .socialIconFooter {
+      background-color:#F4F4F8;
+      font-size: 15px;
+      margin: 0px 5px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    /* =============== ===========  ================*/
+    /* =============== Media Query  ================*/
+    /* =============== ===========  ================*/
+  
+    /* ========= Banner Style =========== */
+  
+    /* @media all and (min-width: 1024px) {
+      .topButton {
+          height: 442px;
+      }
+    } */
+  
+    @media all and (min-width: 1024px) and (max-width: 1280px) {
+      
+      /* Global Css Style  */
+      /* ====================== */
+      .LargeContentWhite {
+          font-size: 40px;
+          line-height: 55px;
+      }
+      .miniContent {
+          max-width: 400px;
+      }
+      .title {
+          font-size: 24px;
+          line-height: 35px;
+      }
+      .boldContent {
+          font-size: 16px;
+          line-height: 22px;
+      }
+  
+      /* ========================== */
+  
+      .textPadding {
+          padding: 25px 0px 0px 25px;
+      }
+      
+      .topButton {
+          max-width: 365px;
+          height: 145px;
+      }
+      
+      .sendImage {
+          margin: 2px 0px 10px 0px !important;
+      }
+      
+      .checkOut {
+          padding-right: 30px;
+      }
+  
+      /*============== About Section  =================*/
+      .aboutImage {
+          min-width: 75% !important;
+          min-height: 75% !important;
+      }
+      .aboutPosiTion {
+          position: absolute;
+          bottom: -65px;
+          left: 45px;
+      }
+      .nagetiveMargin {
+          margin-bottom: -100px;
+      }
+      .aboutPosiTionRight {
+          top: 56%;
+      }
+      .aboutPosiTionLeft {
+          top: 56%;
+      }
+      .italicFont {
+          font-size: 15px;
+          line-height: 20px;
+      }
+      .rightContentVideo  {
+          width: 330px;
+          height: 290px;
+      }
+      .rightContentBg {
+          width: 220px;
+      }
+      .headerSearch .add-search {
+          left: 25%;
+      }
+      .headerSearch .submit-search {
+          left: 54%;
+      }
+      
+     }
+  
+  
+  
+  
+     @media all and (max-width: 768px) { 
+  
+      .searchTop {
+          display: none !important;
+      }
+  
+      /* Global Css Style  */
+      /* ====================== */
+      .LargeContentWhite {
+          font-size: 25px;
+          line-height: 35px;
+      }
+      .miniContent {
+          max-width: 300px;
+      }
+      .title {
+          font-size: 24px;
+          line-height: 35px;
+      }
+      .boldContent {
+          font-size: 16px;
+          line-height: 22px;
+      }
+  
+      /* ========================== */
+  
+      .textPadding {
+          padding: 25px 0px 0px 25px;
+      }
+      
+      .topButton {
+          max-width: 365px;
+          height: 100px;
+      }
+      .tButton {
+          display: none;
+      }
+      .pButton {
+          display: none; 
+      }
+  
+      .checkOut {
+          display: none;
+      }
+      .aboutPosiTion {
+          position: unset;
+      }
+      .aboutImage {
+          min-width: 100% !important;
+        }
+        .subscription {
+          position: relative;
+          width: 100%;
+          height: 23%;
+      }
+  
+      .aboutPosiTionLeft {
+          left: 0px;
+      }
+      .aboutPosiTionRight {
+          right: 0px;
+      }
+      .italicFont {
+          font-size: 15px;
+          line-height: 20px;
+      }
+      .reSpace {
+          margin-top: 50px;
+      }
+  
+      }
+  
+  
+  
+  
+  
+      /* ========================== */
+      @media all and (max-width: 480px) {
+          .bannerDiv {
+              display: none;
+          }
+          .miniContent {
+              max-width: 100%;
+          }
+          .topButton {
+              height: 100px;
+          }
+          .tButton {
+              display: inline;
+          }
+          .pButton {
+              display: inline; 
+          }
+          .qButton {
+              width: 190px;
+              height: 55px;
+          }
+      
+          .checkOut {
+              display: inline;
+              padding-right: 30px;
+          }
+          .leftSpace {
+              padding-left: 25px;
+          }
+          .nagetiveMargin {
+              margin-bottom: 0px;
+          }
+          .aboutPosiTionLeft {
+              position: static;
+              margin: 15px 0;
+          }
+          .aboutPosiTionRight {
+              position: static;
+          }
+          .serviceItalic {
+              font-size: 25px;
+              line-height: 36px;
+          }
+          .rightContentBg {
+              margin: 50px auto 30px ;
+          }
+          .reSpace {
+              margin-top: 50px;
+          }
+          .nav-item {
+              text-align: center;
+              margin: 10px 0px;
+          }
+          .subscription {
+              position: relative;
+              width: 100%;
+              height: 12%;
+            }
+            
+            .subscription .add-email{
+              position: unset;
+            }
+            
+            .subscription .submit-email {
+              position: unset;
+              width: 50%;
+              display: block;
+              margin: 10px auto;
+              top: 0px;
+              right: 0px;
+              height: auto;
+              padding: 0px;
+            }
+            
+            .subscription.done .submit-email {
+              width: calc(100% - 2px);
+              background: #C0E02E;
+            }
+            
+            .subscription .submit-email .before-submit,
+            .subscription .submit-email .after-submit {
+              position: unset;
+            }
+      }
+      /* ========================== */
+      @media all and (max-width: 320px) {
+  
+          /* Global Style CSS  */
+  
+          .secoundTitle {
+              font-size: 23px;
+              line-height: 32px;
+          }
+          .LargeContent {
+              font-size: 35px;
+              line-height: 45px;
+          }
+  
+          /* ============================== */
+  
+          .bannerDiv {
+              display: none;
+          }
+          .miniContent {
+              max-width: 100%;
+          }
+          .topButton {
+              height: 75px;
+          }
+          .tButton {
+              display: none;
+          }
+          .pButton {
+              display: none; 
+          }
+      
+          .checkOut {
+              display: none;
+          }
+  
+          .wButton {
+              padding: 10px 9px;
+          }
+          .qButton {
+              width: 140px;
+              height: 50px;
+              font-size: 16px;
+              line-height: 25px;
+              margin: 0px !important;
+          }
+          .leftSpace {
+              padding-left: 25px;
+          }
+          .aboutPosiTionLeft {
+              margin: 15px 0px;
+          }
+          .serviceItalic {
+              font-size: 18px;
+              line-height: 28px;
+          }
+          .rightContentBg {
+              width: auto;
+          }
+          .nav-item {
+              text-align: center;
+              margin: 10px 0px;
+          }
+  
+  
+  
+          .subscription {
+              position: relative;
+              width: 100%;
+              height: 12%;
+            }
+            
+            .subscription .add-email{
+              position: unset;
+            }
+            
+            .subscription .submit-email {
+              position: unset;
+              width: 50%;
+              display: block;
+              margin: 10px auto;
+              top: 0px;
+              right: 0px;
+              height: auto;
+              padding: 0px;
+            }
+            
+            .subscription.done .submit-email {
+              width: calc(100% - 2px);
+              background: #C0E02E;
+            }
+            
+            .subscription .submit-email .before-submit,
+            .subscription .submit-email .after-submit {
+              position: unset;
+            }
+  
+            .numberCenter {
+              padding: 0px;
+          }
+      }
+      .test1 {
+        
+      }
